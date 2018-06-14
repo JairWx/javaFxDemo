@@ -1,9 +1,5 @@
 package call;
 
-import java.awt.event.MouseAdapter;
-
-import com.sun.glass.events.MouseEvent;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,7 +8,12 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class Demo2 extends Application {
+/**
+ * call between by windows
+ * @author wenjie
+ *
+ */
+public class FirstApp extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -21,18 +22,17 @@ public class Demo2 extends Application {
  
             public void handle(ActionEvent event) {
                 System.out.println("Hello World");
-                //创建一个新的,可以新建一个窗口
+                //new stage for add new App
                 Stage secondStage = new Stage();
-                new Demo1().start(secondStage);
+                new SecondApp().start(secondStage);
             }
         });
 		GridPane grid = new GridPane();
 		grid.add(btn, 0, 0);
 		Scene scene=new Scene(grid,300,275);  
-		primaryStage.setTitle("first demo");  
+		primaryStage.setTitle("firstWindow");  
 		primaryStage.setScene(scene);  
 		primaryStage.show();
-		//
 	}
 
 	public static void main(String[] args) {

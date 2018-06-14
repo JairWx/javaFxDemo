@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class Demo1 extends Application {
+public class SecondApp extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
